@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Asset/logo.png">
+    <title>Contact Me</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* GLOBAL */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0f1f, #111827, #0a0f1f);
+            color: white;
+            padding-top: 100px;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 80px;
+            background: rgba(5, 5, 9, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 55px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #bbb;
+            font-size: 16px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-links a.active {
+            color: white;
+        }
+
+        /* underline animation */
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: #7b4cff;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* CONTACT CONTAINER */
+
+        .container {
+            display: flex;
+            gap: 50px;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* LEFT CONTACT */
+
+        .contact-info {
+            flex: 1;
+            background: rgba(17, 24, 39, 0.85);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-info h1 {
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            color: #60a5fa;
+            font-weight: 500;
+        }
+
+        /* SOCIAL */
+
+        .social {
+            margin-top: 30px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .social a {
+            width: 42px;
+            height: 42px;
+            background: #1f2937;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            background: #2563eb;
+        }
+
+        /* FORM */
+
+        .contact-form {
+            flex: 1;
+            background: rgba(17, 24, 39, 0.85);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            border: none;
+            border-radius: 8px;
+            background: #1f2937;
+            color: white;
+            font-size: 14px;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #1d4ed8;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <img src="Asset/logo.png">
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="portfolio.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="contact.html" class="active">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTACT SECTION -->
+
+    <div class="container">
+
+        <!-- CONTACT INFO -->
+
+        <div class="contact-info">
+
+            <h1>Contact Me</h1>
+            <p>Let's Work Together</p>
+
+            <div class="info-item">
+                <span class="label">Email:</span><br>
+                bandwarshlok@gmail.com
+            </div>
+
+            <div class="info-item">
+                <span class="label">Location:</span><br>
+                India
+            </div>
+
+            <div class="info-item">
+                <span class="label">Freelance:</span><br>
+                Available
+            </div>
+
+            <div class="social">
+
+                <a href="https://github.com/BandwarShlok" target="_blank">G</a>
+                <a href="https://linkedin.com/in/shlokbandwar" target="_blank">in</a>
+                <a href="https://x.com/bandwar49584" target="_blank">X</a>
+                <a href="mailto:bandwarshlok@gmail.com">@</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form">
+
+            <form action="mailto:bandwarshlok@gmail.com" method="post" enctype="text/plain">
+
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Your Email" required>
+
+                <textarea placeholder="Your Message"></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
